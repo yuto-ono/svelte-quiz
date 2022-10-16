@@ -20,6 +20,7 @@
   <Choices {choices} />
   <Result isCorrect />
   <Result isCorrect={false} />
+  <p class="explanation">{explanationText}</p>
 </main>
 
 <style lang="scss">
@@ -40,5 +41,9 @@
     margin-bottom: 18px;
     font-size: 18px;
     font-weight: bold;
+  }
+  .explanation {
+    margin-bottom: 16px;
+    font-size: 16px;
   }
 </style>
