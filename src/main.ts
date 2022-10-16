@@ -1,7 +1,9 @@
 import "./app.css"
 import App from "./App.svelte"
 
-const app = new App({
+type Constructor = (option: { target?: HTMLElement }) => void
+
+const app = new (App as unknown as Constructor)({
   target: document.getElementById("app"),
 })
 
