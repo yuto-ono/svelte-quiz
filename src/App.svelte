@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Choices from "./Choices.svelte"
+
   const questionText =
     "素のJavaScriptに匹敵する高いパフォーマンス、JSXで書ける、きめ細かいリアクティビティ、仮想DOMを使用しないなどの特徴をもつ、 Ryan Carniato 氏が開発したフロントエンドのフレームワークは何でしょう？"
 
@@ -14,6 +16,7 @@
   <h1 class="title">Svelte Quiz</h1>
   <h2 class="heading">問題</h2>
   <p class="question">{questionText}</p>
+  <Choices {choices} />
 </main>
 
 <style lang="scss">
