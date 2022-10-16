@@ -41,7 +41,9 @@
   />
   {#if judged}
     <Result {isCorrect} />
-    <p class="explanation">{explanationText}</p>
+    {#if isCorrect}
+      <p class="explanation">{explanationText}</p>
+    {/if}
     <Button on:click={reset}>リトライ</Button>
   {/if}
 </main>
