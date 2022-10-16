@@ -12,17 +12,38 @@
 
   const explanationText =
     "SolidJS は、 React の思想を取り入れつつも、仮想DOMを使用しない独自の実装をすることで、素のJavaScript並の高いパフォーマンスを実現しました。"
+
+  let yourAnswer = ""
+  let judged = false
+  let isCorrect = false
+
+  const judge = (choice: string) => {
+    yourAnswer = choice
+    judged = true
+    isCorrect = choice === answer
+  }
+
+  const reset = () => {
+    yourAnswer = ""
+    judged = false
+  }
 </script>
 
 <main class="container">
   <h1 class="title">Svelte Quiz</h1>
   <h2 class="heading">問題</h2>
   <p class="question">{questionText}</p>
-  <Choices {choices} />
-  <Result isCorrect />
-  <Result isCorrect={false} />
-  <p class="explanation">{explanationText}</p>
-  <Button>リトライ</Button>
+  <Choices
+    {choices}
+    {yourAnswer}
+    {judged}
+    on:select={(event) => judge(event.detail.choice)}
+  />
+  {#if judged}
+    <Result {isCorrect} />
+    <p class="explanation">{explanationText}</p>
+    <Button on:click={reset}>リトライ</Button>
+  {/if}
 </main>
 
 <style lang="scss">
