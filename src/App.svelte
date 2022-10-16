@@ -1,8 +1,19 @@
 <script lang="ts">
+  const questionText =
+    "素のJavaScriptに匹敵する高いパフォーマンス、JSXで書ける、きめ細かいリアクティビティ、仮想DOMを使用しないなどの特徴をもつ、 Ryan Carniato 氏が開発したフロントエンドのフレームワークは何でしょう？"
+
+  const choices = ["React", "SolidJS", "Svelte"]
+
+  const answer = "SolidJS"
+
+  const explanationText =
+    "SolidJS は、 React の思想を取り入れつつも、仮想DOMを使用しない独自の実装をすることで、素のJavaScript並の高いパフォーマンスを実現しました。"
 </script>
 
 <main class="container">
   <h1 class="title">Svelte Quiz</h1>
+  <h2 class="heading">問題</h2>
+  <p class="question">{questionText}</p>
 </main>
 
 <style lang="scss">
@@ -18,5 +29,10 @@
     border-radius: 4px;
     padding: 16px;
     position: relative;
+  }
+  .heading {
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: bold;
   }
 </style>
