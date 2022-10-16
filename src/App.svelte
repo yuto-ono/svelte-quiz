@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Button from "./Button.svelte"
   import Choices from "./Choices.svelte"
   import Result from "./Result.svelte"
 
@@ -21,6 +22,7 @@
   <Result isCorrect />
   <Result isCorrect={false} />
   <p class="explanation">{explanationText}</p>
+  <Button>リトライ</Button>
 </main>
 
 <style lang="scss">
