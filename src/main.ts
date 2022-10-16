@@ -1,4 +1,4 @@
-import "./app.css"
+import "./app.scss"
 import App from "./App.svelte"
 
 type Constructor = (option: { target?: HTMLElement }) => void
