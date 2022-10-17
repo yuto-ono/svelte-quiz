@@ -4,14 +4,14 @@
   import Result from "./Result.svelte"
 
   const questionText =
-    "素のJavaScriptに匹敵する高いパフォーマンス、JSXで書ける、きめ細かいリアクティビティ、仮想DOMを使用しないなどの特徴をもつ、 Ryan Carniato 氏が開発したフロントエンドのフレームワークは何でしょう？"
+    "少ないコード量で書ける、仮想DOMを使わないなどの特徴をもつ、「サイバネティクスで強化されたWEBアプリ」というキャッチコピーで知られる、 Rich Harris 氏によって作られたフロントエンドのフレームワークは何でしょう？"
 
   const choices = ["React", "SolidJS", "Svelte"]
 
-  const answer = "SolidJS"
+  const answer = "Svelte"
 
   const explanationText =
-    "SolidJS は、 React の思想を取り入れつつも、仮想DOMを使用しない独自の実装をすることで、素のJavaScript並の高いパフォーマンスを実現しました。"
+    "Svelte は仮想DOMによる差分検出のようなテクニックを使用する代わりに、 アプリケーションの状態が変化したときにDOMを外科的に更新するコードをコンパイル時に生成することで、バンドルサイズを小さくし、パフォーマンスを向上させることに成功しました。"
 
   let yourAnswer = ""
   let judged = false
